@@ -43,4 +43,11 @@ bool CommandServer::isReady()
     return WiFi.status() == WL_CONNECTED && _client.connected()
 }
 
-char *CommandServer::processCommand(char *cmd)
+void CommandServer::loop()
+{
+    _client.loop();
+}
+
+char *CommandServer::processCommand(char *cmd) {
+
+}

@@ -64,6 +64,12 @@ public:
     */
     bool isReady();
 
+    /**
+     * Keep running the client by receiving messages
+    */
+    void loop();
+    
+
     char *processCommand(char *cmd);
 private:
     PubSubClient _client; // MQTT client to receive message
